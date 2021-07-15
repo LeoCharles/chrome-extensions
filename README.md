@@ -16,7 +16,7 @@ Chrome 扩展包含以下几个核心概念：
 
 每个 Chrome 扩展都必须包括一个 `manifest.json` 清单文件
 
-```json
+```js
 {
   // 清单文件版本，必要
   "manifest_version": 2,
