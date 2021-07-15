@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "extension_template",
+  "version": "0.1.0",
+  "author": "LeoCong",
+  "description": "这是一个扩展程序的模板",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "扩展插件模板",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs", 
+    "*://*/*", 
+    "http://*/*", 
+    "https://*/*"
+  ]
+}

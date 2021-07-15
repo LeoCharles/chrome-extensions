@@ -1,0 +1,66 @@
+<!--
+ * @Author: LeoCong
+ * @Date: 2021-07-08 00:04:03
+ * @LastEditors: LeoCong
+ * @LastEditTime: 2021-07-15 23:27:30
+ * @Description: 点击扩展图标的弹出页
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extension_demo</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="popup">
+    <h1>这是一个popup页面！</h1>
+    <h2>background</h2>
+    <p>
+      <button>打开后台页</button>
+      <button>调用后台页中的JS方法</button>
+      <button>获取后台页的标题</button>
+      <button>设置后台页的标题</button>
+    </p>
+    <h2>窗口操作</h2>
+    <p>
+      <button>新窗口打开百度</button>
+      <button>执行简单的窗口动画</button>
+      <button>将当前窗口最大化</button>
+      <button>将当前窗口最小化</button>
+      <button>关闭当前窗口所有标签</button>
+    </p>
+    <h2>标签页操作</h2>
+    <p>
+      <button>新标签页打开百度</button>
+      <button>当前标签页打开网页</button>
+      <button>获取当前标签页ID</button>
+      <button>切换到第一个标签页</button>
+    </p>
+    <h2>popup与content_script交互</h2>
+    <p>
+      <button>短连接发送消息到content_script</button>
+      <button>长连接发送消息到content_script</button>
+    </p>
+    <h2>DOM交互</h2>
+    <p>
+      <button>修改背景颜色(通过executeScript实现)</button>
+      <button>修改背景颜色(通过sendMessage实现)</button>
+    </p>
+    <h2>其他</h2>
+    <p>
+      <button>显示badge</button>
+      <button>隐藏badge</button>
+      <button>显示桌面通知</button>
+      <button>检测网页视频</button>
+      <button>右键菜单</button>
+      <button>devtools</button>
+    </p>
+  </div>
+  <script type="text/javascript" src="/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/js/popup.js"></script>
+</body>
+</html>
