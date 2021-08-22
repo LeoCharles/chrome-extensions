@@ -2,10 +2,9 @@
  * @Author: LeoCong
  * @Date: 2021-07-08 00:32:57
  * @LastEditors: LeoCong
- * @LastEditTime: 2021-07-13 00:17:27
+ * @LastEditTime: 2021-08-22 21:53:40
  * @Description: 后台页
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +12,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>后台页</title>
+  <style>
+    html,body{height: 100%;font-size: 16px;}
+    body {font-family: 'Microsoft Yahei';margin:0;padding:0;}
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+    </style>
 </head>
 <body>
-  <h1>这是后台页</h1>
+  <div class="container">
+    <h1>这是后台页</h1>
+    <p>
+      <button id="get_popup_title">获取 popup 页标题</button>
+    </p>
+    <p>
+      <button id="send_message_to_content_script">发送消息给content-script</button>
+    </p>
+  </div>
+  
+  <script type="text/javascript" src="/lib/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="/js/background.js"></script>
 </body>
 </html>

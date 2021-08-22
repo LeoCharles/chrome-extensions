@@ -47,7 +47,7 @@
       "js": ["lib/jquery-3.5.1.min.js", "js/content.js"],
       // 注入自定义样式，注意不要影响全局样式
       "css": ["css/custom.css"],
-      // 注入的时间点，document_start"、"document_end"、 "document_idle"（默认），表示页面空闲时
+      // 代码注入的时间点，document_start"、"document_end"、 "document_idle"（默认），表示页面空闲时
       "run_at": "document_start"
     }
   ],
@@ -72,14 +72,16 @@
   // 普通页面可以访问的插件资源列表，如果不设置无法直接访问
   "web_accessible_resources": [
     "js/inject.js"
-  ]
+  ],
+  // 向地址栏注册一个关键字以提供搜索建议，只能设置一个关键字
+	"omnibox": { "keyword" : "fe" },
+  // devtools页面
+	"devtools_page": "html/devtools.html"
   // 重写浏览器默认页面
   /* "chrome_url_overrides": {
     // 新的标签页
     "newtab": "html/newtab.html"
   }, */
-  // devtools页面
-	/* "devtools_page": "html/devtools.html", */
   // 默认语言
 	/* "default_locale": "zh_CN" */
 }

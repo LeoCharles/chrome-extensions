@@ -2,7 +2,7 @@
  * @Author: LeoCong
  * @Date: 2021-07-08 00:04:03
  * @LastEditors: LeoCong
- * @LastEditTime: 2021-07-16 00:48:24
+ * @LastEditTime: 2021-08-23 01:50:45
  * @Description: 点击扩展图标的弹出页
 -->
 
@@ -21,43 +21,43 @@
     <h2>background</h2>
     <p>
       <button id="open_background">打开后台页</button>
-      <button>调用后台页中的JS方法</button>
-      <button>获取后台页的标题</button>
-      <button>设置后台页的标题</button>
+      <button id="invoke_background_js">调用后台页中的JS方法</button>
+      <button id="get_background_dom">获取后台页的DOM</button>
+      <button id="set_background_title">设置后台页的标题</button>
     </p>
     <h2>窗口操作</h2>
     <p>
-      <button>新窗口打开百度</button>
-      <button>执行简单的窗口动画</button>
-      <button>将当前窗口最大化</button>
-      <button>将当前窗口最小化</button>
-      <button>关闭当前窗口所有标签</button>
+      <button id="get_current_window">获取当前窗口ID</button>
+      <button id="max_current_window">将当前窗口最大化</button>
+      <button id="open_new_window">新窗口打开网页</button>
+      <button id="custom_window_size">执行简单的窗口动画</button>
+      <button id="close_current_window">关闭当前窗口所有标签</button>
     </p>
     <h2>标签页操作</h2>
     <p>
-      <button>新标签页打开百度</button>
-      <button>当前标签页打开网页</button>
-      <button>获取当前标签页ID</button>
-      <button>切换到第一个标签页</button>
+      <button id="get_current_tab">获取当前标签页ID</button>
+      <button id="open_url_current_tab">当前标签页打开网页</button>
+      <button id="open_url_new_tab">新标签页打开网页</button>
+      <button id="highlight_tab">切换到第一个标签页</button>
     </p>
     <h2>popup与content_script交互</h2>
     <p>
-      <button>短连接发送消息到content_script</button>
-      <button>长连接发送消息到content_script</button>
+      <button id="send_message_to_content_script">短连接发送消息给content-script</button>
+      <button id="connect_to_content_script">长连接发送消息到content_script</button>
     </p>
     <h2>DOM交互</h2>
     <p>
-      <button>修改背景颜色(通过executeScript实现)</button>
-      <button>修改背景颜色(通过sendMessage实现)</button>
+      <button  id="update_bg_execute_script">修改背景颜色(通过executeScript实现)</button>
+      <button  id="update_bg_send_message">修改背景颜色(通过sendMessage实现)</button>
     </p>
     <h2>其他</h2>
     <p>
-      <button>显示badge</button>
-      <button>隐藏badge</button>
-      <button>显示桌面通知</button>
-      <button>检测网页视频</button>
-      <button>右键菜单</button>
-      <button>devtools</button>
+      <button id="show_badge">显示badge</button>
+      <button id="hide_badge">隐藏badge</button>
+      <button disabled>右键菜单（contextMenus）</button>
+      <button disabled>覆盖特定页面（overrides）</button>
+      <button disabled>开发者工具（devtools）</button>
+      <button disabled>地址栏搜索建议（omnibox）</button>
     </p>
   </div>
   <script type="text/javascript" src="/lib/jquery-3.5.1.min.js"></script>
