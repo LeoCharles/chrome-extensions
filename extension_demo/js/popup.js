@@ -1,8 +1,8 @@
 /*
  * @Author: LeoCong
  * @Date: 2021-07-08 00:24:04
- * @LastEditors: LeoCong
- * @LastEditTime: 2021-08-23 01:50:49
+ * @LastEditors: LeoCode
+ * @LastEditTime: 2021-12-15 23:14:08
  * @Description: 点击图标时的弹出页
  * popup页面的生命周期一般很短，需要长时间运行的代码不要写在popup里面
  * 在权限上和 background 类似，它们之间最大的不同是生命周期的不同
@@ -20,6 +20,13 @@ $('#invoke_background_js').click(e => {
   var bg = chrome.extension.getBackgroundPage()
   // popup 可以直接调用 background 中的方法
   bg.callFromPopup()
+})
+
+// 调用后台页面录屏的方法
+$('#record_screen').click(e => {
+  var bg = chrome.extension.getBackgroundPage()
+  // popup 可以直接调用 background 中的方法
+  bg.recordScreen()
 })
 
 // 获取后台页DOM

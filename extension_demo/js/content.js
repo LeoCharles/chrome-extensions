@@ -1,8 +1,8 @@
 /*
  * @Author: LeoCong
  * @Date: 2021-07-12 22:10:23
- * @LastEditors: LeoCong
- * @LastEditTime: 2021-08-23 01:18:27
+ * @LastEditors: LeoCode
+ * @LastEditTime: 2021-12-16 00:08:47
  * @Description: 向页面注入的脚本
  * content-scripts 和原始页面共享DOM，但是不共享 JS，无法访问页面中的JS
  * 如要访问页面 JS（例如某个 JS 变量），只能通过 inject.js 来实现
@@ -12,6 +12,28 @@
  * chrome.runtime(connect , getManifest , getURL , id , onConnect , onMessage , sendMessage)
  * chrome.storage
  */
+
+// 给B站加个黑夜模式
+window.onload = (e) => {
+  // 匹配 B 站
+  if (/bilibili/.test(window.location.host)) {
+    let darkMode = $('<div>黑夜模式</div>')
+    darkMode.css({
+      color: '#00a1d6',
+      cursor: 'pointer',
+      position: 'absolute',
+      top: '60px',
+      left: '20px',
+      'z-index': 999,
+    })
+
+    darkMode.click(() => {
+      document.body.style.backgroundColor = '#111'
+    })
+
+    // $('#internationalHeader').append(darkMode)
+  }
+}
 
 /** ------------------ 短连接与长连接 ------------------ */
 // 监听来自 popup 或者 background 短连接的消息（短连接）
